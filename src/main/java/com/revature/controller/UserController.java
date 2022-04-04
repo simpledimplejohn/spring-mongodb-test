@@ -16,13 +16,13 @@ import com.revature.model.User;
 import com.revature.repository.UserRepository;
 
 @RestController
-@RequestMapping("User")
+@RequestMapping("user")
 public class UserController {
 	
 	@Autowired
 	private UserRepository userRepo;
 	
-	@PostMapping("/addUser")
+	@PostMapping("/add")
 	public User saveUser(@RequestBody User user) {
 		return userRepo.save(user);
 		
