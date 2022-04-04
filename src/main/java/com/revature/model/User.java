@@ -1,5 +1,6 @@
 package com.revature.model;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import lombok.Data;
@@ -10,6 +11,7 @@ import lombok.Data;
 @Document(collection="user")
 public class User {
 	
+	@Id
 	private int id;
 	private String firstName;
 	private String lastName;
